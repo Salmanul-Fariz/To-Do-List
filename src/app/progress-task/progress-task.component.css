@@ -1,0 +1,19 @@
+.todo-head-Bar {
+  border: solid;
+  border-radius: 0.7rem;
+  border-width: 0.13rem;
+  border-color: rgb(139 139 139);
+  padding: 12px;
+}
+
+.to-do-icon {
+  font-size: 19px;
+  color: rgb(128, 128, 128);
+  padding: 2px 0;
+  color: #0095ff;
+}
+
+.to-do-head {
+  color: rgb(128, 128, 128);
+  color: #0095ff;
+}
