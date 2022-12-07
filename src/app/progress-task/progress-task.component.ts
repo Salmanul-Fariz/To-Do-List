@@ -11,9 +11,6 @@ import {
   styleUrls: ['./progress-task.component.css'],
 })
 export class ProgressTaskComponent {
-  done = ['Get up'];
-
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
 
   progress = ['Get up', 'Brush teeth'];
 

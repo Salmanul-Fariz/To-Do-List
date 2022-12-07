@@ -11,11 +11,7 @@ import {
   styleUrls: ['./to-do-task.component.css'],
 })
 export class ToDoTaskComponent {
-  done = ['Get up'];
-
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
-
-  progress = ['Get up', 'Brush teeth'];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {

@@ -7,6 +7,6 @@
 <div class="example-container">
   <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[]" class="example-list"
     (cdkDropListDropped)="drop($event)">
-    <app-task></app-task>
+    <app-task *ngFor="let element of done" [todoTasks]="element"></app-task>
   </div>
 </div>
