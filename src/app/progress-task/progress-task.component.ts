@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   CdkDragDrop,
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-progress-task',
   templateUrl: './progress-task.component.html',
   styleUrls: ['./progress-task.component.css'],
 })
-export class ProgressTaskComponent {
+export class ProgressTaskComponent implements OnInit {
+  progress: string[];
 
-  progress = ['Get up', 'Brush teeth'];
+  constructor(private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    this.progress = this.taskService.showProgressList();
+  }
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
