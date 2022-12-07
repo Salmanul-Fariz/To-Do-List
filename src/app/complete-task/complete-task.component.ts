@@ -4,7 +4,9 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+
 import { TaskService } from '../task.service';
+import { TaskDragService } from '../task-drag.service';
 
 @Component({
   selector: 'app-complete-task',
@@ -14,26 +16,16 @@ import { TaskService } from '../task.service';
 export class CompleteTaskComponent implements OnInit {
   done: string[];
 
-  constructor(private taskService: TaskService) {}
+  constructor(
+    private taskService: TaskService,
+    private taskDragService: TaskDragService
+  ) {}
 
   ngOnInit(): void {
     this.done = this.taskService.showCompletedList();
   }
 
   drop(event: CdkDragDrop<string[]>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
-    } else {
-      transferArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
-    }
+    this.taskDragService.drop(event);
   }
 }

@@ -3,10 +3,8 @@
   <h4 class="m-0 to-do-head">Completed</h4>
 </div>
 
-
 <div class="example-container">
-  <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[]" class="example-list"
-    (cdkDropListDropped)="drop($event)">
+  <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
     <app-task *ngFor="let element of done" [todoTasks]="element"></app-task>
   </div>
 </div>
