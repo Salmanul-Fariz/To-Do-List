@@ -1,4 +1,8 @@
-/* /angular */
+.task-delete-icon:hover {
+  cursor: pointer;
+}
+
+/* angular */
 .example-container {
   width: 400px;
   max-width: 100%;

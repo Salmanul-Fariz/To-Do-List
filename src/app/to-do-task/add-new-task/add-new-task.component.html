@@ -1,0 +1,22 @@
+<div class="col-12 d-flex add-new-task" (click)="openModal(modalWindow,overlayWindow)">
+  <i class=" m-0 fa-solid fa-plus add-new-task-icon"></i>
+  <p class="add-new-task-icon">New</p>
+</div>
+
+<div #modalWindow class="addNewModal hidden">
+  <button class="close-modal" (click)="closeModal(modalWindow,overlayWindow)">&times;</button>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <label for="" class="add-new-modal-label">Add New Task</label>
+    </div>
+    <div class="col-12  d-flex justify-content-center mt-2">
+      <input [(ngModel)]="inputValue" type="text" class="add-new-modal-input">
+    </div>
+    <div class="col-12  d-flex justify-content-center mt-2">
+      <button (click)="addNewTask(inputValue)" [disabled]="!inputValue"
+        class="btn btn-success mt-2 add-new-modal-button">ADD</button>
+    </div>
+  </div>
+</div>
+<div #overlayWindow class="overlay hidden" (click)="closeModal(modalWindow,overlayWindow)">
+</div>

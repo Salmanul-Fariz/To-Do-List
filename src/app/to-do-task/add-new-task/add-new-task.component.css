@@ -1,0 +1,111 @@
+.add-new-task {
+  background: white;
+  padding: 15px 18px;
+  margin: 9px 0;
+  border: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  border-color: #c0c0c0;
+  cursor: pointer;
+  box-shadow: 3px 6px 13px rgb(149 157 165 / 20%);
+  color: black;
+}
+
+.add-new-task-icon {
+  font-size: 28px;
+  color: black;
+}
+
+.add-new-task-icon {
+  /* color: #c0c0c0; */
+  color: black;
+  margin: 0;
+  padding: 0px 5px;
+  font-size: 19px;
+  margin-top: 0px;
+}
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 2.4rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+/* -------------------------- */
+
+.hidden {
+  display: none;
+}
+
+.addNewModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  background-color: white;
+  padding: 4rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgb(0 0 0 / 30%);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.add-new-modal-label {
+  font-size: 18px;
+  width: 200px;
+}
+
+.add-new-modal-input {
+  width: 200px;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 14px 9px;
+  border: none;
+  border-bottom: solid;
+  background: #0000000f;
+  border-color: #a4a4a4;
+  border-width: 1px;
+}
+
+.add-new-modal-button {
+  width: 200px;
+}
