@@ -1,9 +1,9 @@
 export class TaskService {
-  todo: string[] = ['Get to work', 'Pick up groceries'];
+  todo: string[] = ['Learn Angular', 'Typing'];
 
-  progress: string[] = ['Get up', 'Brush teeth'];
+  progress: string[] = ['Learn JS'];
 
-  done: string[] = ['Get up'];
+  done: string[] = [];
 
   showTodoList() {
     return this.todo;
@@ -15,5 +15,24 @@ export class TaskService {
 
   showCompletedList() {
     return this.done;
+  }
+
+  addNewTaskList(task: string) {
+    this.todo.push(task);
+  }
+
+  removeTaskList(task: string) {
+    const todoTask = this.todo.indexOf(task);
+    const progressTask = this.progress.indexOf(task);
+    const doneTask = this.done.indexOf(task);
+    console.log(todoTask);
+
+    if (todoTask > -1) {
+      this.todo.splice(todoTask, 1);
+    } else if (progressTask > -1) {
+      this.progress.splice(progressTask, 1);
+    } else if (doneTask > -1) {
+      this.done.splice(doneTask, 1);
+    }
   }
 }

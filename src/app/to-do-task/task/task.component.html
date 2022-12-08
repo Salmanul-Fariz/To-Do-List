@@ -1,1 +1,2 @@
-<div class="example-box" cdkDrag>{{todoTasks}}<i class="task-delete-icon text-secondary fa-solid fa-trash"></i></div>
+<div class="example-box" cdkDrag>{{todoTasks}}<i (click)="removeTask(todoTasks)"
+    class="task-delete-icon text-secondary fa-solid fa-trash"></i></div>

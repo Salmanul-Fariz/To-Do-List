@@ -13,7 +13,7 @@
       <input [(ngModel)]="inputValue" type="text" class="add-new-modal-input">
     </div>
     <div class="col-12  d-flex justify-content-center mt-2">
-      <button (click)="addNewTask(inputValue)" [disabled]="!inputValue"
+      <button (click)="addNewTask(inputValue,modalWindow,overlayWindow)" [disabled]="!inputValue"
         class="btn btn-success mt-2 add-new-modal-button">ADD</button>
     </div>
   </div>

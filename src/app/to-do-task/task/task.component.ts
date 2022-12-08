@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TaskService } from 'src/app/task.service';
 
 @Component({
   selector: 'app-task',
@@ -7,4 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class TaskComponent {
   @Input() todoTasks: string;
+
+  constructor(private taskService: TaskService) {}
+
+  removeTask(task: string) {
+    this.taskService.removeTaskList(task);
+  }
 }
