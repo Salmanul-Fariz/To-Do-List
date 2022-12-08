@@ -21,10 +21,12 @@ export class CompleteTaskComponent implements OnInit {
     private taskDragService: TaskDragService
   ) {}
 
+  // Pass complete list tasks to complete array from service
   ngOnInit(): void {
     this.done = this.taskService.showCompletedList();
   }
 
+  // drag and drop functinality
   drop(event: CdkDragDrop<string[]>) {
     this.taskDragService.drop(event);
   }

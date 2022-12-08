@@ -18,10 +18,12 @@ export class ProgressTaskComponent implements OnInit {
     private taskDragService: TaskDragService
   ) {}
 
+  // Pass progress list tasks to progress array from service
   ngOnInit(): void {
     this.progress = this.taskService.showProgressList();
   }
 
+  // drag and drop functinality
   drop(event: CdkDragDrop<string[]>) {
     this.taskDragService.drop(event);
   }

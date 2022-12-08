@@ -11,6 +11,7 @@ export class TaskComponent {
 
   constructor(private taskService: TaskService) {}
 
+  // Remove task from tasks list
   removeTask(task: string) {
     this.taskService.removeTaskList(task);
   }

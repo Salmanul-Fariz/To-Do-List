@@ -17,10 +17,12 @@ export class ToDoTaskComponent implements OnInit {
     private taskDragService: TaskDragService
   ) {}
 
+  // Pass todo list tasks to todo array from service
   ngOnInit(): void {
     this.todo = this.taskService.showTodoList();
   }
 
+  // drag and drop functinality
   drop(event: CdkDragDrop<string[]>) {
     this.taskDragService.drop(event);
   }
